@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  ps:
+    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    build: .
+    hostname: ps
+    ports:
+      - 8888:8888
+    volumes:
+      - /home/centos/Sources:/notebooks/Sources
+    devices:
+      - /dev/nvidia0
+  worker0:
+    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    build: .
+    hostname: worker1
+    volumes:
+      - /home/centos/Sources:/notebooks/Sources
+    devices:
+      - /dev/nvidia1
+  worker1:
+    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    build: .
+    hostname: worker2
+    volumes:
+      - /home/centos/Sources:/notebooks/Sources
+    devices:
+      - /dev/nvidia2
