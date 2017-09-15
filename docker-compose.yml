@@ -2,7 +2,8 @@ version: '2'
 
 services:
   tensorflow:
-    image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    build: .
     ports:
       - 8888:8888
     volumes:
