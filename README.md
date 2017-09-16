@@ -12,7 +12,7 @@ This project provides example configurations of docker compose for TensorFlow.
 
   * One parameter server and two worker
 
-This project also provides Dockerfile referenced from the above docker compose configuration.
+This project also provides Dockerfile, which is referenced in the above docker compose configuration.
 You can install Keras by using this Dockerfile.
 
 ## Using nvidia-docker-compose
