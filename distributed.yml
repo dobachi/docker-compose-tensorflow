@@ -9,9 +9,15 @@ services:
       - 8888:8888
     volumes:
       - /home/centos/Sources:/notebooks/Sources
+  worker0:
+    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
+    build: .
+    hostname: worker0
+    volumes:
+      - /home/centos/Sources:/notebooks/Sources
     devices:
       - /dev/nvidia0
-  worker0:
+  worker1:
     #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
     build: .
     hostname: worker1
@@ -19,11 +25,3 @@ services:
       - /home/centos/Sources:/notebooks/Sources
     devices:
       - /dev/nvidia1
-  worker1:
-    #image: 'gcr.io/tensorflow/tensorflow:latest-gpu'
-    build: .
-    hostname: worker2
-    volumes:
-      - /home/centos/Sources:/notebooks/Sources
-    devices:
-      - /dev/nvidia2
