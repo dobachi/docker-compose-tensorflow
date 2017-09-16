@@ -27,3 +27,12 @@ $ nvidia-docker-compose -f distributed.yml up -d
 
 The GPU devices are specified in distributed.yml as an example.
 You can change the configuration about devices.
+
+If you started containers by the above example,
+you can attach a terminal to contaners.
+
+e.g.
+
+```
+$ nvidia-docker-compose -f distributed.yml exec ps /bin/bash
+```
