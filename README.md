@@ -15,7 +15,14 @@ This project provides example configurations of docker compose for TensorFlow.
 This project also provides Dockerfile, which is referenced in the above docker compose configuration.
 You can install Keras by using this Dockerfile.
 
-## Using nvidia-docker-compose
+## How to use
+
+First, change or delete 'volumes' configuration.
+This configuration is just an example.
+
+Then, start containers using docker-compose command.
+
+## Using nvidia-docker-compose (Recommended)
 
 You can use https://github.com/eywalker/nvidia-docker-compose to use GPUs in these examples.
 
